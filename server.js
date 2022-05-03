@@ -12,7 +12,7 @@ server.on('connection', function connection(socket) {
   socket.on('message', function message(data) {
     console.log('received: %s', data);
   });
-  socket.send('message from server');
+  socket.send('Hello from server');
   socket.on('close', function() {
     sockets = sockets.filter(s => s !== socket);
   });
